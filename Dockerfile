@@ -7,3 +7,5 @@ RUN yum install -y --enablerepo=remi,remi-php71 php php-common php-mysql php-xml
 RUN service httpd stop
 RUN curl https://raw.githubusercontent.com/Eficode/wait-for/master/wait-for > /opt/wait-for
 RUN chmod +x /opt/wait-for
+RUN curl -sS https://getcomposer.org/installer | php
+RUN mv composer.phar /usr/local/bin/composer
